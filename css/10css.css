@@ -107,6 +107,7 @@ button {
   --color-scrollbar-arrow-clicked-foreground: white;
   --color-tab-active-background: white;
   --color-tab-active-foreground: #black;
+  --color-tab-hovered-background: #d8eaf9;
   --color-tab-background: #f0f0f0;
   --color-tab-foreground: black;
   --color-tab-frame: #d9d9d9;
@@ -616,6 +617,9 @@ progress::-moz-progress-bar {
   border-top: 1px solid var(--color-tab-frame);
   border-left: 1px solid var(--color-tab-frame);
   border-right: 1px solid var(--color-tab-frame);
+}
+.tab:hover {
+  background-color: var(--color-tab-hovered-background);
 }
 .tab:after, .tab:active:after, .tab:not(:active):focus:after {
   background-color: var(--color-tab-active-background);
