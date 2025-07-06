@@ -694,6 +694,10 @@ dialog.is-xl,
   padding: var(--spacing-3);
 }
 
+dialog:not(.fixed-dialog),
+.dialog:not(.fixed-dialog) {
+  animation: dialog-showup 250ms linear normal forwards;
+}
 dialog.is-sm .dialog-body,
 .dialog.is-sm .dialog-body {
   padding: 0;
@@ -711,6 +715,17 @@ dialog.is-xl .dialog-body,
   padding: var(--spacing-6);
 }
 
+@keyframes dialog-showup {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(100vh);
+    transform-origin: right bottom;
+  }
+  to {
+    opacity: unset;
+    transform: unset;
+  }
+}
 .field-group {
   display: flex;
   flex-direction: column;
