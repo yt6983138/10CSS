@@ -1,11 +1,11 @@
 {
-  "name": "95css",
+  "name": "10css",
   "version": "0.4.2",
   "description": "A windows 95-style CSS framework",
   "main": "css/95ss.min.css",
   "scripts": {
-    "build": "sass --style=expanded --source-map 95css.scss css/95css.css",
-    "minify": "postcss css/95css.css --no-map --use cssnano --output css/95css.min.css",
+    "build": "sass --style=expanded --source-map 10css.scss css/10css.css",
+    "minify": "postcss css/10css.css --no-map --use cssnano --output css/10css.min.css",
     "develop": "npm run build -- --watch",
     "publish": "npm run build && npm run minify"
   },

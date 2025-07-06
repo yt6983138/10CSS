@@ -1,17 +1,17 @@
 body {
-  background-color: var(--color-teal);
+  background-color: var(--color-global-background);
   color: var(--color-black);
-  font-family: 'w95fa';
-  font-size: 18px;
+  font-family: var(--font-global);
+  font-size: 14px;
   line-height: 20px;
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: var(--color-white);
-  background: var(--color-blue);
+  color: var(--color-selected-foregroud);
+  background: var(--color-selected-background);
 }
   
 ::selection {
-  color: var(--color-white);
-  background: var(--color-blue);
+  color: var(--color-selected-foregroud);
+  background: var(--color-selected-background);
 }

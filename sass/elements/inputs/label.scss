@@ -1,7 +1,7 @@
 .input-group {
 
     &:has(input[disabled]) label {
-        color: var(--color-gray-300);
+        color: var(--color-disabled-control-foreground);
     }
     
     &.is-horizontal label {
@@ -12,12 +12,11 @@
     &:has(input[type="radio"]:focus) label:after {
         content: "";
         display: block;
-        border: 1.5px dashed var(--color-black);
-        width: calc(100% - 24px + 2px); // 24px input width + 2px so it doesn't stick to the text
+        width: calc(100% - 14px + 2px); // 14px input width + 2px so it doesn't stick to the text
         height: calc(100%);
         position: absolute;
         top: 0px;
-        left: 26px; // Move 2px to the left of the text so it doesn't stick to it
+        left: 16px; // Move 2px to the left of the text so it doesn't stick to it
     }
 }
 

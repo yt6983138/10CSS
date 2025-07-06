@@ -1,10 +1,9 @@
 progress {
     width: 100%;
     appearance: none;
-    background-color: var(--color-gray-200);
-    box-shadow: var(--shadow-inner-1);
-    height: 36px;
-    padding: 4px;
+    background-color: var(--color-progressbar-background);
+    outline: 1px inset var(--color-progressbar-border);
+    height: 23px;
     border: none;
     
     &::-webkit-progress-bar {
@@ -13,14 +12,25 @@ progress {
 
     // Again, for some reason doesn't work when these two are styled together
     &::-webkit-progress-value {
-        background-color: var(--color-blue);
-        background-image: linear-gradient(90deg, var(--color-blue) 90%, var(--color-gray-200) 90%);
-        background-size: 20px 32px;
+        background: var(--color-progressbar-foreground);
+        &:after { // TODO: fix animations
+            position: absolute;
+            animation: progressbar-flashing 1s ease forwards;
+            animation-iteration-count: infinite;
+        }
     }
 
     &::-moz-progress-bar {
-        background-color: var(--color-blue);
-        background-image: linear-gradient(90deg, var(--color-blue) 90%, var(--color-gray-200) 90%);
-        background-size: 20px 32px;
+        background: var(--color-progressbar-foreground);
+    }
+}
+@keyframes progressbar-flashing {
+    0% {
+        left: -50%;
+        background: linear-gradient(90deg, var(--color-progressbar-foreground), var(--color-progressbar-flash), var(--color-progressbar-foreground));
+    }
+    100% {
+        left: 150%;
+        background: linear-gradient(90deg, var(--color-progressbar-foreground), var(--color-progressbar-flash), var(--color-progressbar-foreground));
     }
 }

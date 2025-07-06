@@ -2,8 +2,8 @@
 
 header,
 .header {
-    background-color: var(--color-gray-200);
-    box-shadow: var(--shadow-outer-4);
+    border-top: 1px solid var(--color-tab-frame);
+    background-color: var(--color-global-background);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -11,35 +11,36 @@ header,
     z-index: 50;
     display: flex;
     align-items: center;
-    gap: var(--spacing-3);
-    padding: var(--spacing-3);
+    padding: 0 4px 4px;
 }
 
 header nav,
 .nav {
     display: flex;
-    gap: var(--spacing-3);
 }
 
 header nav a,
 .nav-item,
 .logo {
-    color: var(--color-black);
+    color: var(--color-global-foreground);
     text-decoration: none;
-    background-color: var(--color-gray-200);
-    box-shadow: var(--shadow-outer-4);
+    background-color: var(--color-tab-background);
     position: relative;
-    padding: 8px;
+    height: 21px;
     display: flex;
     align-items: center;
-    cursor: pointer;
     min-width: 160px;
+    margin-right: -1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid var(--color-tab-frame);
+    border-left: 1px solid var(--color-tab-frame);
+    border-right: 1px solid var(--color-tab-frame);
 
     &:active,
     &.is-active {
-        box-shadow: var(--shadow-inner-3);
-        background-color: var(--color-white);
-        @include mixins.checkered-bg;
+        background-color: var(--color-tab-active-background);
+        font-weight: bold;
     }
 }
 

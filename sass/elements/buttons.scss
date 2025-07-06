@@ -1,42 +1,44 @@
 button:not(.tab),
 .btn:not(.tab) {
-    color: var(--color-black);
-    text-decoration: none;
-    background-color: var(--color-gray-200);
-    box-shadow: var(--shadow-default-button-default);
-    position: relative;
-    padding: 12px 14px;
-    cursor: pointer;
+    height: 21px;
+    background-color: var(--color-button-background);
+    outline: 1px solid var(--color-button-frame);
+    border: none;
+    //animation: input-frame-unselected 500ms ease both; // TODO: make this work
 
-    &.is-highlighted {
-        box-shadow: var(--shadow-default-button-highlighted);
+    &:not(:disabled):not(.is-disabled):active, :not(:disabled):not(.is-disabled).is-active { // TODO: fix those class tags not working, also hover not working when active
+        outline: 1px solid var(--color-button-clicked-frame) !important;
+        background-color: var(--color-button-clicked-background) !important;
     }
-
-    &:not(:active):focus,
-    &:not(:active).is-focused {
-        box-shadow: var(--shadow-default-button-focused);
-        outline: none;
-        &::after {
-            content: "";
-            display: block;
-            border: 1.5px dashed var(--color-black);
-            width: calc(100% - 14px);
-            height: calc(100% - 14px);
-            position: absolute;
-            top: 6px;
-            left: 6px;
-        }
+    &:hover {
+        outline: 1px solid var(--color-button-hovered-frame);
+        background-color: var(--color-button-hovered-background);
     }
-
-    &:active,
-    &.is-active {
-        box-shadow: var(--shadow-default-button-active);
+    &:not(:active):focus, :not(:active).is-focused, :not(:active).is-highlighted {
+        outline: 2px solid var(--color-button-hovered-frame);
+        background-color: var(--color-button-background);
     }
 
     &:disabled,
     &.is-disabled {
-        box-shadow: var(--shadow-default-button-disabled);
-        text-shadow: var(--shadow-text-disabled);
-        cursor: default;
+        background-color: var(--color-button-disabled-background);
+        color: var(--color-button-disabled-foreground);
+        outline: 1px solid var(--color-button-disabled-frame);
     }
+
+    //&:not(:active):focus,
+    //&:not(:active).is-focused {
+    //    box-shadow: var(--shadow-default-button-focused);
+    //    outline: none;
+    //    &::after {
+    //        content: "";
+    //        display: block;
+    //        border: 1.5px dashed var(--color-black);
+    //        width: calc(100% - 14px);
+    //        height: calc(100% - 14px);
+    //        position: absolute;
+    //        top: 6px;
+    //        left: 6px;
+    //    }
+    //}
 }

@@ -1,12 +1,12 @@
 hr {
-    border: none;
+    border-top: 1px solid var(--color-unselected-control-frame);
+    border-bottom: 1px solid var(--color-input-background);
     height: 2px;
     width: 100%;
-    background-color: var(--color-gray-300);
-    box-shadow: 0 2px 0 var(--color-white), inset -2px 0 var(--color-white);
     &.is-horizontal {
         width: 2px;
         height: 100%;
-        box-shadow: 2px 0 0 var(--color-white), inset 0 -2px 0 var(--color-white);
+        border-left: 1px solid var(--color-unselected-control-frame);
+        border-right: 1px solid var(--color-input-background);
     }
 }

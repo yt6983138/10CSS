@@ -1,10 +1,10 @@
 dialog,
 .dialog {
-    background-color: var(--color-gray-200);
-    box-shadow: var(--shadow-outer-3);
+    background-color: var(--color-global-background);
+    box-shadow: 0 0 2px 0 var(--color-global-frame);
+    border: 1px solid var(--color-global-frame);
     padding: var(--spacing-3);
     position: relative;
-    border: none;
     min-width: 320px;
     display: flex;
     flex-direction: column;
