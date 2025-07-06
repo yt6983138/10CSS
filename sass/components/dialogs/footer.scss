@@ -1,0 +1,17 @@
+.dialog-footer {
+    color: var(--color-footer-foreground);
+    background-color: var(--color-footer-background);
+    padding: var(--spacing-3) var(--spacing-2) var(--spacing-2) var(--spacing-3);
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    h1, h2, h3, h4, h5, h6, p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
