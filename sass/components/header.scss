@@ -1,15 +1,14 @@
 header,
 .header {
-    border-top: 1px solid var(--color-tab-frame);
     background-color: var(--color-global-background);
     position: fixed;
-    bottom: 0;
+    top: 0;
     width: 100%;
     left: 0;
     z-index: 50;
     display: flex;
     align-items: center;
-    padding: 0 4px 4px;
+    padding: 4px 0 4px;
 }
 
 header nav,
@@ -34,10 +33,12 @@ header nav a,
     border-bottom: 1px solid var(--color-tab-frame);
     border-left: 1px solid var(--color-tab-frame);
     border-right: 1px solid var(--color-tab-frame);
+    border-top: 1px solid var(--color-tab-frame);
 
     &:active,
     &.is-active {
         background-color: var(--color-tab-active-background);
+        border-bottom: none;
         font-weight: bold;
     }
 }
