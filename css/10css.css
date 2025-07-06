@@ -224,7 +224,7 @@ input:disabled, input.is-disabled {
   background-color: var(--color-disabled-control-background);
   color: var(--color-disabled-control-foreground);
   border: 1px inset var(--color-input-background);
-  outline: 1px solid var(--color-disabled-control-frame);
+  outline: 1px solid var(--color-disabled-control);
   animation: none !important;
 }
 
