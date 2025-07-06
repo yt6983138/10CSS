@@ -1,7 +1,5 @@
 // TODO: scrollbar not showing in Firefox
 
-@use '../helpers/mixins';
-
 ::-webkit-scrollbar {
     width: 16px;
     min-height: 34px;
