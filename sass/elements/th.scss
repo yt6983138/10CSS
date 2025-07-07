@@ -1,0 +1,14 @@
+th {
+  font-weight: normal;
+  border-right: 1px solid var(--color-th-frame);
+  background: var(--color-table-background);
+  padding: 0 4px 0;
+  height: 25px;
+
+  &:hover {
+    background: var(--color-th-hovered-background);
+  }
+  &:active {
+    background: var(--color-th-clicked-background);
+  }
+}

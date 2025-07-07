@@ -115,6 +115,12 @@ button {
   --color-header-foreground: black;
   --color-footer-background: white;
   --color-footer-foreground: black;
+  --color-table-background: white;
+  --color-table-frame: #828790;
+  --color-th-frame: #e5e5e5;
+  --color-th-hovered-background: #d9ebf9;
+  --color-th-clicked-background: #bcdcf4;
+  --color-th-foreground: black;
   --color-global-background: #f5f6f7;
   --color-global-foreground: black;
   --color-global-frame: black;
@@ -653,6 +659,37 @@ progress::-moz-progress-bar {
   margin-left: -2px;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.empty-element {
+  border: 1px solid var(--color-unselected-control-frame);
+}
+
+th {
+  font-weight: normal;
+  border-right: 1px solid var(--color-th-frame);
+  background: var(--color-table-background);
+  padding: 0 4px 0;
+  height: 25px;
+}
+th:hover {
+  background: var(--color-th-hovered-background);
+}
+th:active {
+  background: var(--color-th-clicked-background);
+}
+
+table {
+  background: var(--color-table-background);
+  border-spacing: 0;
+  padding: 1px;
+  border: 1px solid var(--color-table-frame);
+}
+
+td {
+  height: 19px;
+  padding: 0 4px 0;
+  font-size: 12px;
 }
 
 .toolbar {
