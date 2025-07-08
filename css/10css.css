@@ -68,16 +68,90 @@ button {
   --spacing-8: calc(var(--spacing-base) * 16);
   --spacing-9: calc(var(--spacing-base) * 20);
   --spacing-10: calc(var(--spacing-base) * 30);
-  --font-global: "Segoe UI";
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Light"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semilight"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semibold"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Bold"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf) format("truetype");
+  font-weight: 700;
+}
+h1 {
+  line-height: 44px;
+}
+
+h2 {
+  line-height: 36px;
+}
+
+h3 {
+  line-height: 28px;
+}
+
+h4 {
+  line-height: 24px;
+}
+
+h5 {
+  line-height: 20px;
+}
+
+h6 {
+  line-height: 20px;
+}
+
+body {
+  background-color: var(--color-global-background);
+  color: var(--color-black);
+  font-family: "Segoe UI";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: var(--color-selected-foregroud);
+  background: var(--color-selected-background);
+}
+
+::selection {
+  color: var(--color-selected-foregroud);
+  background: var(--color-selected-background);
+}
+
+* {
+  --color-global-background: white;
+  --color-global-foreground: black;
+  --color-global-frame: black;
+  --color-accent: var(--color-global-background);
   --color-selected-control-frame: #0078d7;
   --color-unselected-control-frame: #7a7a7a;
   --color-unselected-control-frame-hover: #171717;
   --color-disabled-control-background: #f0f0f0;
   --color-disabled-control-foreground: #6d6d6d;
   --color-disabled-control-frame: #cccccc;
-  --color-input-background: white;
+  --color-control-background: #f5f6f7;
   --color-selected-background: #0078d7;
   --color-selected-foregroud: white;
+  --color-input-background: white;
   --color-button-background-gradient: linear-gradient(#efefef, #e5e5e5);
   --color-button-background: #e1e1e1;
   --color-button-foreground: black;
@@ -121,88 +195,6 @@ button {
   --color-th-hovered-background: #d9ebf9;
   --color-th-clicked-background: #bcdcf4;
   --color-th-foreground: black;
-  --color-global-background: #f5f6f7;
-  --color-global-foreground: black;
-  --color-global-frame: black;
-}
-
-@font-face {
-  font-family: "Segoe UI";
-  font-weight: 200;
-  src: local("Segoe UI Light");
-}
-@font-face {
-  font-family: "Segoe UI";
-  font-weight: 300;
-  src: local("Segoe UI Semilight");
-}
-@font-face {
-  font-family: "Segoe UI";
-  font-weight: 400;
-  src: local("Segoe UI");
-}
-@font-face {
-  font-family: "Segoe UI";
-  font-weight: 600;
-  src: local("Segoe UI Semibold");
-}
-@font-face {
-  font-family: "Segoe UI";
-  font-weight: 700;
-  src: local("Segoe UI Bold");
-}
-@font-face {
-  font-family: "Segoe UI";
-  font-style: italic;
-  font-weight: 400;
-  src: local("Segoe UI Italic");
-}
-@font-face {
-  font-family: "Segoe UI";
-  font-style: italic;
-  font-weight: 700;
-  src: local("Segoe UI Bold Italic");
-}
-h1 {
-  line-height: 44px;
-}
-
-h2 {
-  line-height: 36px;
-}
-
-h3 {
-  line-height: 28px;
-}
-
-h4 {
-  line-height: 24px;
-}
-
-h5 {
-  line-height: 20px;
-}
-
-h6 {
-  line-height: 20px;
-}
-
-body {
-  background-color: var(--color-global-background);
-  color: var(--color-black);
-  font-family: var(--font-global);
-  font-size: 14px;
-  line-height: 20px;
-}
-
-::-moz-selection { /* Code for Firefox */
-  color: var(--color-selected-foregroud);
-  background: var(--color-selected-background);
-}
-
-::selection {
-  color: var(--color-selected-foregroud);
-  background: var(--color-selected-background);
 }
 
 button:not(.tab),
@@ -278,33 +270,45 @@ input:not([type=range]):not([type=checkbox]):not([type=radio]) {
   }
 }
 input[type=checkbox] {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   position: relative;
   appearance: none;
   outline: 1px solid var(--color-unselected-control-frame-hover);
-}
-input[type=checkbox]:focus {
-  animation: none !important;
-  outline: 1px solid var(--color-selected-control-frame);
 }
 input[type=checkbox]:hover {
   animation: none !important;
   outline: 1px solid var(--color-selected-control-frame);
 }
 input[type=checkbox]:disabled, input[type=checkbox].is-disabled {
-  outline: 1px solid var(--color-disabled-control);
+  outline: 1px solid var(--color-disabled-control-frame);
   border: none;
 }
-input[type=checkbox]:checked {
+input[type=checkbox]:active {
+  outline: 1px solid var(--color-button-clicked-frame);
+}
+input[type=checkbox]:checked::after {
   content: "";
-  width: 14px;
-  height: 14px;
-  background-image: url("data:image/svg+xml,%3Csvg viewbox='0 0 11 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cline stroke='%23000' x1='2.5' y1='6.5' x2='5.5' y2='9.5'/%3E%3Cline stroke='%23000' y2='10.5' x2='5.5' y1='3.5' x1='11.5'/%3E%3C/g%3E%3C/svg%3E");
+  position: relative;
+  width: 11px;
+  height: 11px;
+  background-image: url("./res/CheckBox_Checked.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: block;
+}
+input[type=checkbox]:active:checked:not(:disabled):not(.is-disabled)::after {
+  content: "";
+  filter: sepia(100%) hue-rotate(190deg) saturate(200%) !important;
+}
+input[type=checkbox]:hover:checked:not(:disabled):not(.is-disabled)::after {
+  content: "";
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+input[type=checkbox]:disabled:checked::after, input[type=checkbox].is-disabled:checked::after {
+  content: "";
+  filter: sepia(100%) hue-rotate(150deg) brightness(0.8) grayscale(100%) contrast(0.2) brightness(1.68);
 }
 
 select {
@@ -344,32 +348,25 @@ select[multiple] option:checked {
 }
 
 input[type=color] {
-  padding-right: 36px !important;
   position: relative;
-  background-image: url("data:image/svg+xml,%3Csvg width='28' height='32' viewBox='0 0 28 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_iiii_40_1601)'%3E%3Crect width='28' height='32' fill='%23C3C3C3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 12.5699H8V14.2842H20V12.5699ZM18.2857 14.2842H9.71429V15.9985H11.4286V17.7128H13.1429V19.4271H14.8571V17.7128H16.5714V15.9985H18.2857V14.2842Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_iiii_40_1601' x='0' y='0' width='28' height='32' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='4' dy='4'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow_40_1601'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='-4' dy='-4'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='effect1_innerShadow_40_1601' result='effect2_innerShadow_40_1601'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.870588 0 0 0 0 0.870588 0 0 0 0 0.870588 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='effect2_innerShadow_40_1601' result='effect3_innerShadow_40_1601'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='-2' dy='-2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='effect3_innerShadow_40_1601' result='effect4_innerShadow_40_1601'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
-  background-position: right 4px center;
 }
 input[type=color]:disabled, input[type=color].is-disabled {
-  background-image: url("data:image/svg+xml,%3Csvg width='28' height='32' viewBox='0 0 28 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_iiii_40_2248)'%3E%3Crect width='28' height='32' fill='%23C3C3C3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.71 14.2871H9.70999V16.0014H21.71V14.2871ZM19.9957 16.0014H11.4243V17.7157H13.1386V19.43H14.8528V21.1443H16.5671V19.43H18.2814V17.7157H19.9957V16.0014Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 12.5699H8V14.2842H20V12.5699ZM18.2857 14.2842H9.71429V15.9985H11.4286V17.7128H13.1429V19.4271H14.8571V17.7128H16.5714V15.9985H18.2857V14.2842Z' fill='%23808080'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_iiii_40_2248' x='0' y='0' width='28' height='32' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='4' dy='4'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow_40_2248'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='-4' dy='-4'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 0 0.501961 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='effect1_innerShadow_40_2248' result='effect2_innerShadow_40_2248'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='2' dy='2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.870588 0 0 0 0 0.870588 0 0 0 0 0.870588 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='effect2_innerShadow_40_2248' result='effect3_innerShadow_40_2248'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='-2' dy='-2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3CfeBlend mode='normal' in2='effect3_innerShadow_40_2248' result='effect4_innerShadow_40_2248'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
-  background-position: right 4px center;
   background-repeat: no-repeat;
 }
 
 input[type=number]::-webkit-inner-spin-button {
   opacity: 1;
-  width: 16px;
-  height: 18px;
-  margin-right: -7px;
-  margin-top: 4px;
+  height: 100%;
+  aspect-ratio: 16/18;
   border: 1px inset var(--color-number-button-frame);
   outline: 1px solid var(--color-number-button-frame-outer);
   background: var(--color-button-background-gradient);
 }
 
 input[type=radio] {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   position: relative;
   appearance: none;
   outline: 1px solid var(--color-unselected-control-frame-hover);
@@ -384,19 +381,34 @@ input[type=radio]:hover {
   outline: 1px solid var(--color-selected-control-frame);
 }
 input[type=radio]:disabled, input[type=radio].is-disabled {
-  outline: 1px solid var(--color-disabled-control);
+  outline: 1px solid var(--color-disabled-control-frame);
   border: none;
 }
-input[type=radio]:checked:after {
+input[type=radio]:active {
+  outline: 1px solid var(--color-button-clicked-frame);
+}
+input[type=radio]:active:checked:not(:disabled):not(.is-disabled)::after {
   content: "";
-  width: 10px;
-  height: 10px;
+  background: var(--color-button-clicked-frame) !important;
+}
+input[type=radio]:checked::after {
+  content: "";
+  width: 7px;
+  height: 7px;
   background: var(--color-global-foreground);
   display: block;
   border-radius: 50%;
   position: absolute;
   top: 2px;
   left: 2px;
+}
+input[type=radio]:hover:checked:not(:disabled):not(.is-disabled)::after {
+  content: "";
+  background: var(--color-selected-control-frame);
+}
+input[type=radio]:disabled:checked::after, input[type=radio].is-disabled:checked::after {
+  content: "";
+  background: var(--color-disabled-control-frame);
 }
 
 input[type=range] {
@@ -539,28 +551,44 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background: var(--color-progressbar-foreground);
 }
-progress::-webkit-progress-value:after {
-  position: absolute;
-  animation: progressbar-flashing 1s ease forwards;
-  animation-iteration-count: infinite;
-}
 progress::-moz-progress-bar {
   background: var(--color-progressbar-foreground);
 }
+progress::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 23px;
+  margin-top: -23px;
+  animation: progressbar-flashing-move 2s linear forwards;
+  animation-iteration-count: infinite;
+  background-image: url("./res/ProgressOverlay_Move.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  clip-path: polygon(0 0, calc(attr(value type(<number>)) * 100%) 0, calc(attr(value type(<number>)) * 100%) 100%, 0 100%);
+}
 
-@keyframes progressbar-flashing {
+@keyframes progressbar-flashing-move {
   0% {
-    left: -50%;
-    background: linear-gradient(90deg, var(--color-progressbar-foreground), var(--color-progressbar-flash), var(--color-progressbar-foreground));
+    background-position: left -100% top 0;
   }
   100% {
-    left: 150%;
-    background: linear-gradient(90deg, var(--color-progressbar-foreground), var(--color-progressbar-flash), var(--color-progressbar-foreground));
+    background-position: left 200% top 0;
+  }
+}
+@keyframes progressbar-flashing-pulse {
+  0% {
+    background-position: left -100% top;
+  }
+  100% {
+    background-position: left 200% top;
   }
 }
 ::-webkit-scrollbar {
   width: 16px;
-  min-height: 34px;
+  height: 16px;
 }
 
 ::-webkit-scrollbar-track {
@@ -577,10 +605,9 @@ progress::-moz-progress-bar {
 
 ::-webkit-scrollbar-button {
   display: block;
-  height: 17px;
   background-color: var(--color-scrollbar-background);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 50%;
 }
 ::-webkit-scrollbar-button:active {
   background-color: var(--color-scrollbar-arrow-clicked);
@@ -589,10 +616,19 @@ progress::-moz-progress-bar {
   background-color: var(--color-scrollbar-arrow-hovered);
 }
 
+::-webkit-scrollbar-button:vertical {
+  width: 16px;
+  height: 17px;
+}
+
+::-webkit-scrollbar-button:horizontal {
+  width: 17px;
+  height: 16px;
+}
+
 ::-webkit-scrollbar-button:vertical:start:decrement {
-  background-position: center;
-  background-size: 12px;
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0%209.42999L12%209.42999V7.71571L0%207.71571V9.42999ZM1.71429%207.71569L10.2857%207.71569V6.0014H8.57143V4.28712L6.85714%204.28712V2.57283H5.14286V4.28712H3.42857V6.0014L1.71429%206.0014V7.71569Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 7px 6px;
+  background-image: url("./res/ScrollBar_ArrowUp.png");
 }
 
 ::-webkit-scrollbar-button:vertical:start:increment {
@@ -604,16 +640,13 @@ progress::-moz-progress-bar {
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
-  background-position: center;
-  background-size: 12px;
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M12%202.57001H0V4.28429H12V2.57001ZM10.2857%204.28431H1.71429V5.9986H3.42857V7.71288H5.14286V9.42717H6.85714V7.71288H8.57143V5.9986H10.2857V4.28431Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 7px 6px;
+  background-image: url("./res/ScrollBar_ArrowDown.png");
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
-  width: 16px;
-  background-size: 12px;
-  background-position: center;
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M9.42859%2012.0015L9.42859%200.00146484L7.7143%200.00146484L7.7143%2012.0015H9.42859ZM7.71429%2010.2872L7.71429%201.71575L6%201.71575V3.43004H4.28571L4.28571%205.14432H2.57143V6.85861H4.28571V8.57289H6L6%2010.2872H7.71429Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 6px 7px;
+  background-image: url("./res/ScrollBar_ArrowLeft.png");
 }
 
 ::-webkit-scrollbar-button:horizontal:start:increment {
@@ -625,10 +658,8 @@ progress::-moz-progress-bar {
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment {
-  width: 16px;
-  background-size: 12px;
-  background-position: center;
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M2.57141%200.00140381L2.57141%2012.0014L4.2857%2012.0014L4.2857%200.00140373L2.57141%200.00140381ZM4.28571%201.71569L4.28571%2010.2871L6%2010.2871L6%208.57283L7.71429%208.57283L7.71429%206.85855L9.42857%206.85855L9.42857%205.14426L7.71429%205.14426L7.71429%203.42997L6%203.42997L6%201.71569L4.28571%201.71569Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 6px 7px;
+  background-image: url("./res/ScrollBar_ArrowRight.png");
 }
 
 ::-webkit-scrollbar-corner {
@@ -703,7 +734,7 @@ td {
 
 dialog,
 .dialog {
-  background-color: var(--color-global-background);
+  background-color: var(--color-control-background);
   box-shadow: 0 0 2px 0 var(--color-global-frame);
   border: 1px solid var(--color-global-frame);
   padding: var(--spacing-3);
@@ -732,7 +763,7 @@ dialog.is-xl,
 
 .dialog-header {
   color: var(--color-header-foreground);
-  background-color: var(--color-header-background);
+  background-color: var(--color-accent);
   padding: var(--spacing-3) var(--spacing-2) var(--spacing-2) var(--spacing-3);
   margin-top: -8px;
   margin-left: -8px;
@@ -792,7 +823,7 @@ dialog.is-xl .dialog-body,
 
 header,
 .header {
-  background-color: var(--color-global-background);
+  background-color: var(--color-control-background);
   position: fixed;
   top: 0;
   width: 100%;
@@ -800,7 +831,7 @@ header,
   z-index: 50;
   display: flex;
   align-items: center;
-  padding: 4px 0 4px;
+  padding: 4px 0 0px;
 }
 
 header nav,
