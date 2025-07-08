@@ -201,10 +201,10 @@ body {
 button:not(.tab),
 .btn:not(.tab) {
   color: var(--color-global-foreground);
-  height: 21px;
   background-color: var(--color-button-background);
   outline: 1px solid var(--color-button-frame);
   border: none;
+  padding: 0.5px 8px 0.5px;
 }
 button:not(.tab):not(:disabled):not(.is-disabled):active, button:not(.tab) :not(:disabled):not(.is-disabled).is-active,
 .btn:not(.tab):not(:disabled):not(.is-disabled):active,
@@ -535,8 +535,6 @@ fieldset {
 legend {
   padding: 0 4px;
   position: relative;
-  top: 4px;
-  left: -4px;
 }
 
 progress {
@@ -672,7 +670,7 @@ progress::after {
   background-color: var(--color-tab-background);
   position: relative;
   margin-right: -1px;
-  height: 21px;
+  padding: 0 8px 0;
   border-top: 1px solid var(--color-tab-frame);
   border-left: 1px solid var(--color-tab-frame);
   border-right: 1px solid var(--color-tab-frame);
@@ -702,8 +700,7 @@ th {
   font-weight: normal;
   border-right: 1px solid var(--color-th-frame);
   background: var(--color-table-background);
-  padding: 0 4px 0;
-  height: 25px;
+  padding: 2.5px 4px 2.5px;
 }
 th:hover {
   background: var(--color-th-hovered-background);
@@ -720,7 +717,6 @@ table {
 }
 
 td {
-  height: 19px;
   padding: 0 4px 0;
   font-size: 12px;
 }
