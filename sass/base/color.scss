@@ -1,0 +1,73 @@
+* {
+  --color-global-background: white;
+  --color-global-foreground: black;
+  --color-global-frame: black;
+
+  --color-accent: var(--color-global-background);
+
+  --color-selected-control-frame: #0078d7;
+  --color-unselected-control-frame: #7a7a7a;
+  --color-unselected-control-frame-hover: #171717;
+  --color-disabled-control-background: #f0f0f0;
+  --color-disabled-control-foreground: #6d6d6d;
+  --color-disabled-control-frame: #cccccc;
+  --color-control-background: #f5f6f7;
+
+  --color-selected-background: #0078d7;
+  --color-selected-foregroud: white;
+
+  --color-input-background: white;
+
+  --color-button-background-gradient: linear-gradient(#efefef, #e5e5e5);
+  --color-button-background: #e1e1e1;
+  --color-button-foreground: black;
+  --color-button-frame: #adadad;
+  --color-button-clicked-background: #cce4f7;
+  --color-button-clicked-frame: #005499;
+  --color-button-hovered-background: #e5f1fb;
+  --color-button-hovered-frame: #0078d7;
+  --color-button-disabled-frame: #bfbfbf;
+  --color-button-disabled-background: #cccccc;
+  --color-button-disabled-foreground: #afa0a8;
+
+  --color-number-button-frame: #acacac;
+  --color-number-button-frame-outer: #f0f0f0;
+
+  --color-range-border: #d6d6d6;
+  --color-range-background: #e7eaea;
+
+  --color-groupbox-border: #dcdcdc;
+  --color-progressbar-border: #dcdcdc;
+  --color-progressbar-background: #e6e6e6;
+  --color-progressbar-foreground: #06b025;
+  --color-progressbar-flash: #90ee8d;
+
+  --color-scrollbar-background: #f0f0f0;
+  --color-scrollbar-body: #cccccc;
+  --color-scrollbar-body-hovered: #a6a6a6;
+  --color-scrollbar-arrow-foreground: #606060;
+  --color-scrollbar-arrow-hovered: #dadada;
+  --color-scrollbar-arrow-clicked: #606060;
+  --color-scrollbar-arrow-clicked-foreground: white;
+
+  --color-tab-active-background: white;
+  --color-tab-active-foreground: #black;
+  --color-tab-hovered-background: #d8eaf9;
+  --color-tab-background: #f0f0f0;
+  --color-tab-foreground: black;
+  --color-tab-frame: #d9d9d9;
+
+  --color-header-background: white;
+  --color-header-foreground: black;
+
+  --color-footer-background: white;
+  --color-footer-foreground: black;
+
+  --color-table-background: white;
+  --color-table-frame: #828790;
+
+  --color-th-frame: #e5e5e5;
+  --color-th-hovered-background: #d9ebf9;
+  --color-th-clicked-background: #bcdcf4;
+  --color-th-foreground: black;
+}
