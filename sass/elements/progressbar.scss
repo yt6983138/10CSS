@@ -1,3 +1,5 @@
+@use "sass:string";
+
 progress {
     width: 100%;
     appearance: none;
@@ -13,24 +15,63 @@ progress {
     // Again, for some reason doesn't work when these two are styled together
     &::-webkit-progress-value {
         background: var(--color-progressbar-foreground);
-        &:after { // TODO: fix animations
-            position: absolute;
-            animation: progressbar-flashing 1s ease forwards;
-            animation-iteration-count: infinite;
-        }
     }
 
     &::-moz-progress-bar {
         background: var(--color-progressbar-foreground);
     }
+
+    &::after {
+        content: "";
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 23px;
+        margin-top: -23px;
+        animation: progressbar-flashing-move 2s linear forwards;
+        animation-iteration-count: infinite;
+        background-image: url("./res/ProgressOverlay_Move.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        clip-path: polygon(0 0,
+                calc(attr(value string.unquote("type(<number>)")) * 100%) 0, // bruh workaround
+                calc(attr(value string.unquote("type(<number>)")) * 100%) 100%,
+                0 100%);
+    }
+    //&::before { // TODO: fix pulse animation
+    //    content: "";
+    //    position: relative;
+    //    display: block;
+    //    width: 100%;
+    //    height: 23px;
+    //    margin-bottom: -23px;
+    //    animation: progressbar-flashing-move 2s linear forwards;
+    //    animation-iteration-count: infinite;
+    //    background-image: url("./res/ProgressOverlay_Pulse.png");
+    //    background-size: 100% 100%;
+    //    background-repeat: no-repeat;
+    //    overflow: hidden;
+    //    clip-path: polygon(0 0,
+    //            calc(attr(value string.unquote("type(<number>)")) * 100%) 0, // bruh workaround
+    //            calc(attr(value string.unquote("type(<number>)")) * 100%) 100%,
+    //            0 100%);
+    //}
 }
-@keyframes progressbar-flashing {
+
+@keyframes progressbar-flashing-move {
     0% {
-        left: -50%;
-        background: linear-gradient(90deg, var(--color-progressbar-foreground), var(--color-progressbar-flash), var(--color-progressbar-foreground));
+        background-position: left -100% top 0;
     }
     100% {
-        left: 150%;
-        background: linear-gradient(90deg, var(--color-progressbar-foreground), var(--color-progressbar-flash), var(--color-progressbar-foreground));
+        background-position: left 200% top 0;
     }
 }
+@keyframes progressbar-flashing-pulse {
+    0% {
+        background-position: left -100% top;
+    }
+    100% {
+        background-position: left 200% top;
+    }
+ }
