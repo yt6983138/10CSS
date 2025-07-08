@@ -121,7 +121,7 @@ h6 {
 
 body {
   background-color: var(--color-global-background);
-  color: var(--color-black);
+  color: var(--color-global-foreground);
   font-family: "Segoe UI";
   font-size: 14px;
   line-height: 20px;
@@ -195,10 +195,12 @@ body {
   --color-th-hovered-background: #d9ebf9;
   --color-th-clicked-background: #bcdcf4;
   --color-th-foreground: black;
+  color: var(--color-global-foreground);
 }
 
 button:not(.tab),
 .btn:not(.tab) {
+  color: var(--color-global-foreground);
   height: 21px;
   background-color: var(--color-button-background);
   outline: 1px solid var(--color-button-frame);
@@ -735,7 +737,7 @@ td {
 dialog,
 .dialog {
   background-color: var(--color-control-background);
-  box-shadow: 0 0 2px 0 var(--color-global-frame);
+  box-shadow: 0 0 2px 0 black;
   border: 1px solid var(--color-global-frame);
   padding: var(--spacing-3);
   position: relative;
@@ -764,7 +766,9 @@ dialog.is-xl,
 .dialog-header {
   color: var(--color-header-foreground);
   background-color: var(--color-accent);
-  padding: var(--spacing-3) var(--spacing-2) var(--spacing-2) var(--spacing-3);
+  height: 31px;
+  padding-left: 10px;
+  padding-top: 2px;
   margin-top: -8px;
   margin-left: -8px;
   margin-right: -8px;
@@ -777,6 +781,7 @@ dialog.is-xl,
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  margin-top: -4px;
 }
 
 .dialog-body {
@@ -863,7 +868,7 @@ header nav a:active, header nav a.is-active,
 .nav-item.is-active,
 .logo:active,
 .logo.is-active {
-  background-color: var(--color-tab-active-background);
+  background-color: var(--color-accent);
   border-bottom: none;
   font-weight: bold;
 }

@@ -37,7 +37,7 @@ header nav a,
 
     &:active,
     &.is-active {
-        background-color: var(--color-tab-active-background);
+        background-color: var(--color-accent);
         border-bottom: none;
         font-weight: bold;
     }

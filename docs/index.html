@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/10css.css" />
+    <link id="dark-css" rel="stylesheet" href="" />
     <style>
         body {
             padding: var(--spacing-10);
@@ -96,6 +97,7 @@
             <h2>Buttons</h2>
         </div>
         <div class="dialog-body">
+            <button id="toggle-dark" onclick="document.getElementById('dark-css').href = '../css/10css.dark.css'">Enable Dark Mode</button>
             <div class="toolbar">
                 <button>Default button</button>
                 <button class="is-highlighted">Highlighted button</button>
