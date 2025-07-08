@@ -1,6 +1,6 @@
 input[type="radio"] {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   position: relative;
   appearance: none;
   outline: 1px solid var(--color-unselected-control-frame-hover); // intended
@@ -18,21 +18,35 @@ input[type="radio"] {
 
   &:disabled,
   &.is-disabled {
-    outline: 1px solid var(--color-disabled-control);
+    outline: 1px solid var(--color-disabled-control-frame);
     border: none;
   }
+  &:active {
+    outline: 1px solid var(--color-button-clicked-frame);
+  }
 
-  &:checked {
-    &:after {
-      content: "";
-      width: 10px;
-      height: 10px;
-      background: var(--color-global-foreground); // TODO: fix color in other condition
-      display: block;
-      border-radius: 50%;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-    }
+  &:active:checked:not(:disabled):not(.is-disabled)::after {
+    content: "";
+    background: var(--color-button-clicked-frame) !important;
+  }
+  &:checked::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: var(--color-global-foreground);
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+  &:hover:checked:not(:disabled):not(.is-disabled)::after {
+    content: "";
+    background: var(--color-selected-control-frame);
+  }
+  &:disabled:checked::after,
+  &.is-disabled:checked::after {
+    content: "";
+    background: var(--color-disabled-control-frame);
   }
 }
