@@ -747,6 +747,10 @@ pre > code {
   padding: 2px 6px 2px;
 }
 
+pre {
+  padding: 5px 0 5px;
+}
+
 .toolbar {
   display: flex;
   gap: var(--spacing-5);
