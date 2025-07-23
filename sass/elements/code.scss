@@ -1,0 +1,29 @@
+code { // note: copied from input/base.scss
+  display: inline-block;
+  padding: 0 2px 0;
+  background-color: var(--color-input-background);
+  outline: 1px solid var(--color-unselected-control-frame);
+  border: none;
+  //animation: input-frame-unselected 500ms ease both; // TODO: make this work
+
+  &:hover {
+    animation: input-frame-hovered 500ms ease forwards; // TODO: make reverse animation for this
+  }
+  &:focus {
+    //outline: 1px solid var(--color-selected-control-frame);
+    animation: input-frame-selected 500ms ease forwards;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: var(--color-disabled-control-background);
+    color: var(--color-disabled-control-foreground);
+    border: 1px inset var(--color-input-background);
+    outline: 1px solid var(--color-disabled-control);
+    animation: none !important;
+  }
+}
+pre > code {
+  display: block;
+  padding: 2px 6px 2px;
+}
